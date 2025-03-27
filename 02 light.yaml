@@ -9,7 +9,7 @@
       path: /home/ec2-user/new_dir
       state: directory
 
-- name: Create Directory
+- name: create directory
   file:
     path: /home/ec2-user/new_dir_1
     state: directory
