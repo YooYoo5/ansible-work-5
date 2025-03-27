@@ -1,5 +1,15 @@
 # ansible n1 -m file -a "path=/home/ec2-user/n1_dir state=directory"
 ---
+- name: Setup Environment
+  hosts: nodes
+  become: true
+  tasks:
+    - name: Create directory
+      ansible.builtin.file:
+        path: /home/ec2-user/new_directory
+        state: directory
+        mode: '0755'
+
 - name: Update n1 servers
   hosts: n1
 
