@@ -42,4 +42,3 @@
       path: /home/ec2-user/new_dir_group2
       state: directory
 ...      
-
