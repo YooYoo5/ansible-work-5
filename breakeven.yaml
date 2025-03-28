@@ -1,5 +1,5 @@
 ---
-- name: Static Page
+- name: Deploy Static Page
   hosts: g1
   become: yes
 
@@ -16,8 +16,6 @@
       ansible.builtin.copy:
         src: files/static.html
         dest: /var/www/html/static.html
-        owner: root
-        group: root
-        mode: '0644'
+        
 
 ...
