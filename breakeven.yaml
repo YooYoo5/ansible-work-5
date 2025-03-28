@@ -4,9 +4,9 @@
   become: yes
 
   tasks:
-    - name: Update static page
-      ansible.builtin.copy:
-        src: files/static.html
+    - name: Copy Static HTML File
+      copy:
+        src: /static.html
         dest: /var/www/html/static.html
         
         
