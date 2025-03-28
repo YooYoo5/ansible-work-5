@@ -1,5 +1,5 @@
 ---
-- name: Static Page
+- name: Deploy Static Page
   hosts: g1
   become: yes
   tasks:
