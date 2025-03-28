@@ -1,9 +1,8 @@
 ---
-- name: Deploy Static Page
+- name: Static Page
   hosts: g1
   become: yes
-
-  tasks: 
+  tasks:
     - name: Ensure /var/www/html exists
       ansible.builtin.file:
         path: /var/www/html
@@ -12,10 +11,14 @@
         group: root
         mode: '0755'
 
-    - name: Copy Static HTML File
+    - name: Update static page
       ansible.builtin.copy:
-        src: /static.html
-        dest: /var/www/html/index.html
+        src: files/static.html
+        dest: /var/www/html/static.html
+        owner: root
+        group: root
+        mode: '0644'
+
         
 
 ...
