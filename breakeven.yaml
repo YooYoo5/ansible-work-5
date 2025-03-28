@@ -12,9 +12,9 @@
         group: root
         mode: '0755'
 
-    - name: Update static page
+    - name: Copy Static HTML File
       ansible.builtin.copy:
-        src: files/static.html
+        src: /static.html
         dest: /var/www/html/static.html
         
 
