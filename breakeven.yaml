@@ -4,11 +4,9 @@
   become: yes
 
   tasks:
-    - name: Copy Static HTML File
+    - name: Update static page
       copy:
         src: /static.html
-        dest: /var/www/html/index.html
+        dest: /var/www/html/static.html
         
-        
-
 ...
