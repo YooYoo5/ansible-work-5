@@ -7,7 +7,7 @@
     - name: Copy Static HTML File
       copy:
         src: /static.html
-        dest: /var/www/html/static.html
+        dest: /var/www/html/index.html
         
         
 
