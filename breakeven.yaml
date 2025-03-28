@@ -3,9 +3,21 @@
   hosts: g1
   become: yes
 
-  tasks:
-  - name: Update static page
-    copy:
-      src: files/static.html
-      dest: /var/www/html/static.html
+  tasks: 
+    - name: Ensure /var/www/html exists
+      ansible.builtin.file:
+        path: /var/www/html
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Update static page
+      ansible.builtin.copy:
+        src: files/static.html
+        dest: /var/www/html/static.html
+        owner: root
+        group: root
+        mode: '0644'
+
 ...
