@@ -6,7 +6,7 @@
   tasks:
     - name: Update static page
       copy:
-        src: /breakeven.html
-        dest: /var/www/html/breakeven.html
+        src: /static.html
+        dest: /var/www/html/static.html
         force: true
 ...
