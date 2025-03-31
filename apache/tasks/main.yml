@@ -1,5 +1,5 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # tasks file for apache
--import tasks: download.yaml
--import tasks: format.yaml
+- import_tasks: download.yaml
+- import_tasks: format.yaml
