@@ -1,0 +1,12 @@
+---
+  tasks:
+    - name: Update static page
+      copy:
+        src: static.html
+        dest: /var/www/html/static.html
+        
+    - name: Update Unique page
+      template:
+        src: unique.j2
+        dest: /var/www/html/unique.html      
+...
