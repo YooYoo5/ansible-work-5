@@ -1,0 +1,12 @@
+---
+- name: Flexible Page
+  hosts: g1
+  become: yes
+  vars:
+  myusername: African Princess
+
+  tasks:
+    - name: Update Unique Page
+      template:
+        src: unique.j2
+        dest: /var/www/html/unique.html
